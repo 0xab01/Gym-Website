@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Univer Gym</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="icon" type="image/x-icon" href="/favi.JPG">
+  <style>
+    @media (max-width: 768px) {
+        .menu {
+          display: none;
+        }
+        .menu-toggle {
+          display: block;
+        }
+      }
+      @media (min-width: 769px) {
+        .menu-toggle {
+          display: none;
+        }
+      }
+      .menu-toggle:checked + .menu {
+        display: block;
+      }
+  </style>
+</head>
+<body class="bg-white">
+  <header class="bg-red-500 py-4">
+    <nav class="container mx-auto flex items-center justify-between px-4">
+      <a href="#" class="text-white text-2xl font-bold">Univer Gym</a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle hidden">
+      <ul class="flex space-x-4 menu">
+        <li><a href="home.html" class="text-white">Home</a></li>
+        <li><a href="about.html" class="text-white">About Us</a></li>
+        <li><a href="service.html" class="text-white">Services</a></li>
+        <li><a href="contact.html" class="text-white">Contact</a></li>
+      </ul>
+      <label for="menu-toggle" class="block cursor-pointer sm:hidden">
+        <svg class="text-white fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </label>
+    </nav>
+  </header>
+  
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl sm:text-5xl text-red-500 font-bold mb-8">Contact Us</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h3 class="text-xl sm:text-2xl text-red-500 font-bold mb-4">Location</h3>
+          <p class="text-gray-600">123 Gym Street</p>
+          <p class="text-gray-600">City, State, ZIP</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h3 class="text-xl sm:text-2xl text-red-500 font-bold mb-4">Contact Information</h3>
+          <p class="text-gray-600">Phone: 123-456-7890</p>
+          <p class="text-gray-600">Email: info@univergym.com</p>
+        </div>
+      </div>
+      
+      <div class="mt-8">
+        <h3 class="text-2xl sm:text-3xl text-red-500 font-bold mb-4">Send us a message</h3>
+        <form action="contact.php" method="POST">
+          <div class="mb-4">
+            <label for="name" class="block text-gray-600">Your Name</label>
+            <input type="text" id="name" name="name" class="border border-gray-300 rounded-md p-2 w-full">
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-600">Your Email</label>
+            <input type="email" id="email" name="email" class="border border-gray-300 rounded-md p-2 w-full">
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-gray-600">Message</label>
+            <textarea id="message" name="message" class="border border-gray-300 rounded-md p-2 w-full"></textarea>
+          </div>
+          <button type="submit" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full uppercase font-semibold">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-white">&copy; 2023 Univer Gym. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
