@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Univer Gym</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="icon" type="image/x-icon" href="/favi.JPG">
+  <style>
+    @media (max-width: 768px) {
+        .menu {
+          display: none;
+        }
+        .menu-toggle {
+          display: block;
+        }
+      }
+      @media (min-width: 769px) {
+        .menu-toggle {
+          display: none;
+        }
+      }
+      .menu-toggle:checked + .menu {
+        display: block;
+      }
+  </style>
+</head>
+<body class="bg-white">
+  <header class="bg-red-500 py-4">
+    <nav class="container mx-auto flex items-center justify-between px-4">
+      <a href="#" class="text-white text-2xl font-bold">Univer Gym</a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle hidden">
+      <ul class="flex space-x-4 menu">
+        <li><a href="home.html" class="text-white">Home</a></li>
+        <li><a href="about.html" class="text-white">About Us</a></li>
+        <li><a href="service.html" class="text-white">Services</a></li>
+        <li><a href="contact.html" class="text-white">Contact</a></li>
+      </ul>
+      <label for="menu-toggle" class="block cursor-pointer sm:hidden">
+        <svg class="text-white fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </label>
+    </nav>
+  </header>
+  
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl sm:text-5xl text-red-500 font-bold mb-8">About Us</h1>
+      
+      <div class="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-8">
+        <div class="md:w-1/2">
+          <img src="https://source.unsplash.com/800x600/?gym" alt="Gym Image" class="w-full rounded-lg">
+        </div>
+        <div class="md:w-1/2 flex flex-col justify-between">
+          <div>
+            <p class="text-gray-600">Univer Gym is a state-of-the-art fitness center dedicated to helping individuals achieve their fitness goals. We believe that a healthy body leads to a healthy mind and a fulfilling life. With our world-class facilities and expert trainers, we provide a supportive environment for all fitness enthusiasts.</p>
+            <p class="text-gray-600">Our mission is to inspire and empower our members to lead an active and healthy lifestyle. We offer a wide range of services, including personalized training, group classes, cardio and strength training, and nutrition counseling. Whatever your fitness level or goal, we have the resources and expertise to help you succeed.</p>
+            <p class="text-gray-600">At Univer Gym, we prioritize our members' well-being and strive to create a welcoming and inclusive community. We believe in fostering a positive and motivating atmosphere where everyone can thrive and reach their full potential.</p>
+          </div>
+          <div class="mt-8">
+            <a href="#" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full uppercase font-semibold self-start md:self-center">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-white">&copy; 2023 Univer Gym. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
